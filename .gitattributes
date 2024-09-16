@@ -1,0 +1,8 @@
+# すべてのファイルのエンコードをUTF-8に設定
+* encoding=utf-8
+# すべてのファイルの行末をLFに設定
+* text eol=lf
+# zipファイルはバイナリとして扱う
+*.zip binary
+# pngファイルはバイナリとして扱う
+*.png binary

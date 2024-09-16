@@ -1,0 +1,78 @@
+{
+    "name": "graphql-ts",
+    "version": "0.0.1",
+    "description": "",
+    "author": "",
+    "private": true,
+    "license": "UNLICENSED",
+    "scripts": {
+        "start": "ts-node -r tsconfig-paths/register src/index.ts",
+        "format": "prettier --write \"src/**/*.ts\" \"__test__/**/*.ts\"",
+        "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
+    },
+    "dependencies": {
+        "axios": "^1.7.2"
+    },
+    "devDependencies": {
+        "@apollo/server": "^4.11.0",
+        "@graphql-tools/schema": "^10.0.6",
+        "@types/cors": "^2.8.17",
+        "@types/express": "^4.17.21",
+        "@types/node": "^20.3.1",
+        "@typescript-eslint/eslint-plugin": "^6.0.0",
+        "@typescript-eslint/parser": "^6.0.0",
+        "body-parser": "^1.20.3",
+        "cors": "^2.8.5",
+        "eslint": "^8.42.0",
+        "eslint-config-prettier": "^9.0.0",
+        "eslint-plugin-jsdoc": "^48.2.12",
+        "eslint-plugin-prettier": "^5.0.0",
+        "express": "^4.20.0",
+        "graphql": "^16.9.0",
+        "graphql-subscriptions": "^2.0.0",
+        "graphql-ws": "^5.16.0",
+        "prettier": "^3.0.0",
+        "source-map-support": "^0.5.21",
+        "ts-loader": "^9.4.3",
+        "ts-node": "^10.9.1",
+        "tsconfig-paths": "^4.2.0",
+        "typescript": "^4.9.5",
+        "ws": "^8.18.0"
+    },
+    "jest": {
+        "moduleFileExtensions": [
+            "js",
+            "json",
+            "ts"
+        ],
+        "reporters": [
+            "default",
+            [
+                "<rootDir>/reporter.js",
+                {
+                    "outputDir": "__test__/reports",
+                    "outputFile": "test-results.csv"
+                }
+            ]
+        ],
+        "testRegex": ".*\\.spec\\.ts$",
+        "transform": {
+            "^.+\\.(t|j)s$": [
+                "ts-jest",
+                "tsconfig.json"
+            ]
+        },
+        "moduleNameMapper": {
+            "^@/(.+)$": "<rootDir>/src/$1",
+            "^__test__/(.+)$": "<rootDir>/__test__/$1"
+        },
+        "collectCoverageFrom": [
+            "**/*.(t|j)s"
+        ],
+        "coverageDirectory": "../coverage",
+        "testEnvironment": "node",
+        "globalSetup": "<rootDir>/__test__/setup.ts",
+        "globalTeardown": "<rootDir>/__test__/teardown.ts"
+    },
+    "packageManager": "pnpm@9.4.0+sha512.f549b8a52c9d2b8536762f99c0722205efc5af913e77835dbccc3b0b0b2ca9e7dc8022b78062c17291c48e88749c70ce88eb5a74f1fa8c4bf5e18bb46c8bd83a"
+}
